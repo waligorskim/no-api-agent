@@ -1,0 +1,25 @@
+{
+  "name": "no-api-agent",
+  "version": "0.1.0",
+  "description": "Resilient web access agent with 7-level fallback cascade",
+  "type": "module",
+  "bin": {
+    "no-api-agent": "./src/cli.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./hook": "./hooks/web-access-fallback.mjs"
+  },
+  "scripts": {
+    "start": "node src/cli.mjs",
+    "test": "node --test src/**/*.test.mjs"
+  },
+  "dependencies": {
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "puppeteer": "^23.0.0"
+  },
+  "devDependencies": {},
+  "keywords": ["scraper", "fallback", "web-access", "claude-code", "mcp"],
+  "license": "MIT"
+}
